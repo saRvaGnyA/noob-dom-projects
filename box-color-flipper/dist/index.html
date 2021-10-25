@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .show-no {
+            display: none;
+        }
+
+        .clicked {
+            transition-duration: 200ms;
+            transform: rotate(90deg);
+        }
+    </style>
+    <title>Color Flipper</title>
+</head>
+
+<body class="bg-blue-100 font-mono h-screen">
+    <nav class="bg-red-100 flex justify-around flex-wrap border-red-900 border-b-2">
+        <div class="text-red-500 font-extrabold p-2 w-1/2 flex justify-center text-lg md:mt-1">
+            Color Flipper
+        </div>
+        <div class="md:hidden w-1/2 flex justify-center">
+            <i id="btn" class="fas fa-bars p-3 text-pink-900 font-black  hover:bg-red-300"></i>
+        </div>
+        <div class="hidden md:flex">
+            <ul class="flex flex-row justify-between">
+                <li
+                    class="text-center border-2 border-pink-300 rounded-lg p-1 my-2 text-gray-700 hover:bg-red-50 mx-8 px-2 tw">
+                    Tailwind</li>
+                <li
+                    class="text-center border-2 border-pink-300 rounded-lg p-1 my-2 text-gray-700 hover:bg-red-50 mx-8 px-2 hex">
+                    Hex
+                </li>
+            </ul>
+        </div>
+        <div id="navbar" class="md:hidden show-no">
+            <ul>
+                <li class="text-center border-2 border-pink-300 rounded-lg p-1 my-2 text-gray-700 hover:bg-red-50 tw">
+                    TW</li>
+                <li class="text-center border-2 border-pink-300 rounded-lg p-1 my-2 text-gray-700 hover:bg-red-50 hex">
+                    Hex
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="flex justify-center items-center h-1/2 mx-4 my-8">
+        <div id="box" class="bg-red-200 bg-opacity-50">
+            <div
+                class="text-black text-2xl border-blue-400 text-center p-4 border-4 border-double rounded-lg shadow-lg hover:border-red-900 text-opacity-100">
+                Background Color of this
+                box: <span id="here"></span></div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
