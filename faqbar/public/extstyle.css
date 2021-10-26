@@ -1,0 +1,39 @@
+#right:active {
+    transform: rotate(180deg);
+}
+
+#right:hover {
+    transform  : scale(1.2);
+    text-shadow: .09rem .09rem teal;
+}
+
+.sidebar {
+    display  : none;
+    z-index  : -1;
+    translate: -100;
+}
+
+.sidebar-visible {
+    position  : fixed;
+    visibility: visible;
+    z-index   : 1;
+    translate : 0;
+}
+
+.answer {
+    display: none;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.exit {
+    position: absolute;
+    top     : 1rem;
+    right   : 2rem;
+}
+
+.exit:hover {
+    transform: scale(1.5);
+}
